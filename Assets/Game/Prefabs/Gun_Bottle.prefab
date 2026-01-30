@@ -48,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4305899511578522944, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: bulletSpawn
+      value: 
+      objectReference: {fileID: 1915170987118448569}
+    - target: {fileID: 4305899511578522944, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 9024933806776756330, guid: 76dc047a59b60a145ac28dccdecfe4a3, type: 3}
     - target: {fileID: 7289111963918758871, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
       propertyPath: m_Name
       value: Gun_Bottle
@@ -57,3 +65,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+--- !u!4 &1915170987118448569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4788810626720226889, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+  m_PrefabInstance: {fileID: 6404479555504050672}
+  m_PrefabAsset: {fileID: 0}

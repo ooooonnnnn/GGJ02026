@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6e8c9be2-a22d-4994-bee0-91bb398d1392" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun_Bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun_Bottle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/SodaCork.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/SodaCork.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/GunShooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/GunShooting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/AndroidXR/AndroidXRSettingsInitializer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/AndroidXR/AndroidXRSettingsInitializer" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,26 +157,26 @@
         </breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs</url>
-          <line>70</line>
+          <line>71</line>
           <properties documentPath="C:\Users\omrit\Documents\GitHub\GGJ02026\Assets\Game\Scripts\SodaBottle.cs" containingFunctionPresentation="Method 'ItemPresentedToBottle'">
             <startOffsets>
-              <option value="2501" />
+              <option value="2545" />
             </startOffsets>
             <endOffsets>
-              <option value="2525" />
+              <option value="2569" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs</url>
-          <line>83</line>
+          <line>84</line>
           <properties documentPath="C:\Users\omrit\Documents\GitHub\GGJ02026\Assets\Game\Scripts\SodaBottle.cs" containingFunctionPresentation="Method 'ItemPresentedToBottle'">
             <startOffsets>
-              <option value="2828" />
+              <option value="2872" />
             </startOffsets>
             <endOffsets>
-              <option value="2829" />
+              <option value="2873" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
