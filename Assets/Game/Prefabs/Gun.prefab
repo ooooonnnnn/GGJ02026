@@ -63,6 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2613019888168551753}
   - component: {fileID: 1614983375485042184}
+  - component: {fileID: 5060015452964515241}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -162,6 +163,18 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
+--- !u!114 &5060015452964515241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289111963918758871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6857e4de106694f8401f98712b5cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &7652881366557992115
 GameObject:
   m_ObjectHideFlags: 0
