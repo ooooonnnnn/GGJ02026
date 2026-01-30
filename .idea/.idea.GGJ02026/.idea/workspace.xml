@@ -7,10 +7,14 @@
     <list default="true" id="6e8c9be2-a22d-4994-bee0-91bb398d1392" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun_Bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun_Bottle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/SodaCork.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/SodaCork.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/BottleCap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/BottleCap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/HandManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/HandManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR/AndroidXR/AndroidXRSettingsInitializer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/AndroidXR/AndroidXRSettingsInitializer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/InteractionLayerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI/Settings/Resources/InteractionLayerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +22,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="2" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/MessagePrinter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/NoStealGrabInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@1e87cf1dccb8/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.management@574ebfb1e976/Runtime/XRLoaderHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -39,25 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "gun-script",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;gun-script&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Windows\GGJ2026.exe" />
@@ -114,6 +120,8 @@
       <option name="presentableId" value="Default" />
       <updated>1769770313756</updated>
       <workItem from="1769770336406" duration="14243000" />
+      <workItem from="1769788214714" duration="3414000" />
+      <workItem from="1769792263012" duration="1050000" />
     </task>
     <servers />
   </component>

@@ -15,10 +15,25 @@ public class SodaBottle : MonoBehaviour
         gun = GetComponent<GunShooting>();
         cap = GetComponentInChildren<BottleCap>();
         
-        HandleSelection selection = GetComponent<HandleSelection>();
-        selection.OnGrabbed.AddListener(cap.MakeGrabbable);
-        capSelectionScript = cap.GetComponent<HandleSelection>();
-        capSelectionScript.OnGrabbed.AddListener(CapRemoved);
+        // HandleSelection selection = GetComponent<HandleSelection>();
+        // selection.OnGrabbed.AddListener(cap.MakeGrabbable);
+        // capSelectionScript = cap.GetComponent<HandleSelection>();
+        // capSelectionScript.OnGrabbed.AddListener(CapRemoved);
+
+        // ColliderEvents capColliderEvents = cap.GetComponent<ColliderEvents>();
+        // capColliderEvents.TriggerEnter += OnObjectEntersCapCol;
+        // capColliderEvents.TriggerExit += OnObjectExitCapCol;
+    }
+
+    private GameObject handInRangeObj;
+
+    private void OnObjectEntersCapCol(Collider other)
+    {
+    }
+
+    private void OnObjectExitCapCol(Collider other)
+    {
+        
     }
 
     private void CapRemoved()
