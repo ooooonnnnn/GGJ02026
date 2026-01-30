@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SubsystemsImplementation;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
@@ -100,6 +101,15 @@ public class SodaBottle : MonoBehaviour
 
     private void TryShoot(SelectEnterEventArgs args)
     {
-        if (fizzing && capped) gun.Shoot();
+        if (fizzing && capped)
+        {
+            gun.OnShoot.AddListener(DestroyCap);
+            gun.Shoot();
+        }
+    }
+
+    private void DestroyCap()
+    {
+        Destroy(cap.gameObject);
     }
 }

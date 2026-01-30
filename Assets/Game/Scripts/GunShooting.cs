@@ -6,10 +6,12 @@ public class GunShooting : MonoBehaviour
     [SerializeField] private int clipSize;
     [SerializeField] private int currentAmmo;
 
-    [SerializeField] private UnityEvent OnShoot;
+    [SerializeField] public UnityEvent OnShoot;
     
     public void Shoot()
     {
+        if (currentAmmo <= 0) return;
+        currentAmmo--;
         print("shoot");
         OnShoot.Invoke();
     }
