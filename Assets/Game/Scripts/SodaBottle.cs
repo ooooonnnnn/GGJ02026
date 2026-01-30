@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class SodaBottle : MonoBehaviour
 {
@@ -9,11 +11,15 @@ public class SodaBottle : MonoBehaviour
     [SerializeField, HideInInspector] private GunShooting gun;
     [SerializeField, HideInInspector] private BottleCap cap;
     [SerializeField, HideInInspector] private HandleSelection capSelectionScript;
+    [SerializeField, HideInInspector] private XRGrabInteractable grabInteractable;
 
     private void OnValidate()
     {
         gun = GetComponent<GunShooting>();
         cap = GetComponentInChildren<BottleCap>();
+        grabInteractable = GetComponent<XRGrabInteractable>();
+        
+        grabInteractable.firstSelectEntered.AddListener(alwidhj);
         
         // HandleSelection selection = GetComponent<HandleSelection>();
         // selection.OnGrabbed.AddListener(cap.MakeGrabbable);
@@ -27,6 +33,10 @@ public class SodaBottle : MonoBehaviour
 
     private GameObject handInRangeObj;
 
+    private void alwidhj(SelectEnterEventArgs args)
+    {
+    }
+    
     private void OnObjectEntersCapCol(Collider other)
     {
     }
