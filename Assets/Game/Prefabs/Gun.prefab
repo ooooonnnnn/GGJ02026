@@ -32,6 +32,7 @@ Transform:
   - {fileID: 4981941423872641988}
   - {fileID: 4042579256121653510}
   - {fileID: 6324279920428680334}
+  - {fileID: 4596417322980195110}
   m_Father: {fileID: 2613019888168551753}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!1 &1271539739155864626
@@ -157,6 +158,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3cff131e163324eb0dd66f3d5b01ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColliderEvents
+--- !u!1 &4214852379755708122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4596417322980195110}
+  - component: {fileID: 312430979730943660}
+  m_Layer: 0
+  m_Name: poke collision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4596417322980195110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214852379755708122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8699692041221872222}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &312430979730943660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214852379755708122}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05, y: 0.05, z: 0.05}
+  m_Center: {x: 0, y: 0.09, z: 0}
 --- !u!1 &6040388807581302071
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +223,7 @@ GameObject:
   - component: {fileID: 8055560022735227042}
   m_Layer: 0
   m_Name: collider
-  m_TagString: Untagged
+  m_TagString: Bottle Cap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,6 +278,8 @@ GameObject:
   - component: {fileID: 9148742141099747831}
   - component: {fileID: 8061442458305004291}
   - component: {fileID: 7712302383009297831}
+  - component: {fileID: 4100007085256115809}
+  - component: {fileID: 2888787527029567870}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -306,8 +362,10 @@ MonoBehaviour:
   gun: {fileID: 4305899511578522944}
   cap: {fileID: 7187213747908644234}
   grabInteractable: {fileID: 8061442458305004291}
+  pokeInteractable: {fileID: 4100007085256115809}
   capGrabInteractable: {fileID: 5333396327085820648}
   colliderEvents: {fileID: 6683329398409225792}
+  capRoot: {fileID: 3822598423793647830}
 --- !u!114 &8061442458305004291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +381,6 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders:
   - {fileID: 231052318512123012}
-  - {fileID: 8055560022735227042}
   m_InteractionLayers:
     m_Bits: 1
   m_DistanceCalculationMode: 1
@@ -452,6 +509,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OneHandOnly
   grabInteractable: {fileID: 8061442458305004291}
+--- !u!114 &4100007085256115809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289111963918758871}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
+--- !u!114 &2888787527029567870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289111963918758871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115f1a2a50d85cd4b9d6dad4c95622be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Filtering.XRPokeFilter
+  m_Interactable: {fileID: 4100007085256115809}
+  m_PokeCollider: {fileID: 312430979730943660}
+  m_PokeConfiguration:
+    m_UseConstant: 1
+    m_ConstantValue:
+      m_PokeDirection: 3
+      m_InteractionDepthOffset: 0
+      m_EnablePokeAngleThreshold: 1
+      m_PokeAngleThreshold: 89.9
+    m_Variable: {fileID: 0}
 --- !u!1 &7355883338653158330
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,8 +798,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5491634004667541625, guid: 58189f947686ff141b398dd8e441c175, type: 3}
       propertyPath: m_TagString
-      value: Bottle Cap
+      value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 6284430748602960300, guid: 58189f947686ff141b398dd8e441c175, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c673c2aeb4a74245b0bbd1babdafee6, type: 2}
+    - target: {fileID: 6284430748602960300, guid: 58189f947686ff141b398dd8e441c175, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c6db56bd68a4e642903690ffe4e47b7, type: 2}
     m_RemovedComponents:
     - {fileID: 498288289676257600, guid: 58189f947686ff141b398dd8e441c175, type: 3}
     - {fileID: 476856166780404596, guid: 58189f947686ff141b398dd8e441c175, type: 3}
@@ -818,8 +979,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
-  m_ForceGravityOnDetach: 0
-  m_RetainTransformParent: 1
+  m_ForceGravityOnDetach: 1
+  m_RetainTransformParent: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1

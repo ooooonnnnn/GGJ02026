@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
@@ -13,6 +14,7 @@ public class SodaBottle : MonoBehaviour
     [SerializeField, HideInInspector] private GunShooting gun;
     [SerializeField, HideInInspector] private BottleCap cap;
     [SerializeField, HideInInspector] private XRGrabInteractable grabInteractable;
+    [SerializeField, HideInInspector] private XRSimpleInteractable pokeInteractable;
     [SerializeField, HideInInspector] private XRGrabInteractable capGrabInteractable;
     [SerializeField, HideInInspector] private ColliderEvents colliderEvents;
     [SerializeField] private Transform capRoot;
@@ -23,6 +25,7 @@ public class SodaBottle : MonoBehaviour
         cap = GetComponentInChildren<BottleCap>();
         grabInteractable = GetComponent<XRGrabInteractable>();
         colliderEvents = GetComponentInChildren<ColliderEvents>();
+        pokeInteractable = GetComponentInChildren<XRSimpleInteractable>();
         
         capGrabInteractable = cap.GetComponent<XRGrabInteractable>();
         capGrabInteractable.enabled = false;
@@ -31,6 +34,8 @@ public class SodaBottle : MonoBehaviour
         grabInteractable.lastSelectExited.AddListener(DisableCapGrab);
         
         capGrabInteractable.firstSelectEntered.AddListener(CapRemoved);
+        
+        pokeInteractable.firstSelectEntered.AddListener(TryShoot);
     }
 
     private GameObject handInRangeObj;
@@ -87,7 +92,14 @@ public class SodaBottle : MonoBehaviour
                 capTransform.localPosition = Vector3.zero;
                 capTransform.localRotation = Quaternion.identity;
                 capTransform.GetComponent<Rigidbody>().isKinematic = true;
+                
+                pokeInteractable.enabled = true;
             }
         }
+    }
+
+    private void TryShoot(SelectEnterEventArgs args)
+    {
+        if (fizzing && capped) gun.Shoot();
     }
 }

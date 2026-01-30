@@ -1690,6 +1690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun_Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 8139764614477848718, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+      propertyPath: m_PokeConfiguration.m_ConstantValue.m_PokeDirection
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8980748884880086201, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5732
