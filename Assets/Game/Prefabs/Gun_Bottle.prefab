@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun_Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 9148742141099747831, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: reloadToShootDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

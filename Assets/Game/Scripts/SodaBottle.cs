@@ -40,6 +40,8 @@ public class SodaBottle : MonoBehaviour
     }
 
     private GameObject handInRangeObj;
+    [SerializeField, Tooltip("Time it takes for the poke interaction to become enabled once the protocol is complete")]
+    private float reloadToShootDelay;
 
     private void EnableCapGrab(SelectEnterEventArgs args)
     {
@@ -94,9 +96,14 @@ public class SodaBottle : MonoBehaviour
                 capTransform.localRotation = Quaternion.identity;
                 capTransform.GetComponent<Rigidbody>().isKinematic = true;
                 
-                pokeInteractable.enabled = true;
+                Invoke(nameof(EnablePoke), reloadToShootDelay);
             }
         }
+    }
+
+    private void EnablePoke()
+    {
+        pokeInteractable.enabled = true;
     }
 
     private void TryShoot(SelectEnterEventArgs args)
