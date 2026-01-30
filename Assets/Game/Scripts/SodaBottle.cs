@@ -5,13 +5,13 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class SodaBottle : MonoBehaviour
 {
-    private bool capped;
+    private bool capped = true;
     private bool fizzing;
 
-    [SerializeField, HideInInspector] private GunShooting gun;
-    [SerializeField, HideInInspector] private BottleCap cap;
-    [SerializeField, HideInInspector] private HandleSelection capSelectionScript;
-    [SerializeField, HideInInspector] private XRGrabInteractable grabInteractable;
+    [SerializeField] private GunShooting gun;
+    [SerializeField, ] private BottleCap cap;
+    [SerializeField, ] private XRGrabInteractable grabInteractable;
+    [SerializeField] private XRGrabInteractable capGrabInteractable;
 
     private void OnValidate()
     {
@@ -19,36 +19,29 @@ public class SodaBottle : MonoBehaviour
         cap = GetComponentInChildren<BottleCap>();
         grabInteractable = GetComponent<XRGrabInteractable>();
         
-        grabInteractable.firstSelectEntered.AddListener(alwidhj);
+        capGrabInteractable = cap.GetComponent<XRGrabInteractable>();
+        capGrabInteractable.enabled = false;
         
-        // HandleSelection selection = GetComponent<HandleSelection>();
-        // selection.OnGrabbed.AddListener(cap.MakeGrabbable);
-        // capSelectionScript = cap.GetComponent<HandleSelection>();
-        // capSelectionScript.OnGrabbed.AddListener(CapRemoved);
-
-        // ColliderEvents capColliderEvents = cap.GetComponent<ColliderEvents>();
-        // capColliderEvents.TriggerEnter += OnObjectEntersCapCol;
-        // capColliderEvents.TriggerExit += OnObjectExitCapCol;
+        grabInteractable.firstSelectEntered.AddListener(HandleGrabbed);
+        grabInteractable.lastSelectExited.AddListener(HandleDropped);
     }
 
     private GameObject handInRangeObj;
 
-    private void alwidhj(SelectEnterEventArgs args)
+    private void HandleGrabbed(SelectEnterEventArgs args)
     {
-    }
-    
-    private void OnObjectEntersCapCol(Collider other)
-    {
+        //if capped, allow cap to be grabbed
+        if (capped) capGrabInteractable.enabled = true;
     }
 
-    private void OnObjectExitCapCol(Collider other)
+    private void HandleDropped(SelectExitEventArgs args)
     {
-        
+        //if capped, disable cap grab
+        if (capped) capGrabInteractable.enabled = false;
     }
 
     private void CapRemoved()
     {
         capped = false;
-        capSelectionScript.OnGrabbed.RemoveListener(CapRemoved);
     }
 }
