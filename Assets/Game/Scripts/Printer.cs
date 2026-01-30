@@ -12,10 +12,12 @@ public class Printer : MonoBehaviour
     public void AttachToInteractor(SelectEnterEventArgs args)
     {
         print(args.interactorObject.GetAttachTransform(args.interactableObject).position);
-        
-        // Destroy(args.interactorObject.transform.gameObject);
-        
-        // args.interactableObject.transform.SetParent(
-        //     args.interactorObject.GetAttachTransform());
+
+        Transform grabbed = args.interactableObject.transform;
+        Transform grabbingHand = args.interactorObject.handedness == InteractorHandedness.Right ?
+            HandManager.instance.RightPalm :
+            HandManager.instance.LeftPalm;
+
+        grabbed.SetParent(grabbingHand);
     }
 }
