@@ -29,6 +29,6 @@ public class OneHandOnly : MonoBehaviour
 
     private void BecomeUnowned(SelectExitEventArgs args)
     {
-        grabInteractable.interactionLayers = InteractionLayerMask.GetMask("Everything");
+        grabInteractable.interactionLayers = InteractionLayerMask.GetMask(leftHandLayer, rightHandLayer);
     }
 }
