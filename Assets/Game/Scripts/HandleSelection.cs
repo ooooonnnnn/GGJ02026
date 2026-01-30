@@ -24,7 +24,6 @@ public class HandleSelection : MonoBehaviour
         XRSimpleInteractable interactable = GetComponent<XRSimpleInteractable>();
         interactable.selectEntered.AddListener(HandleSelect);
         rb = GetComponent<Rigidbody>();
-        rb.isKinematic = false;
     }
 
     private void HandleSelect(SelectEnterEventArgs args)

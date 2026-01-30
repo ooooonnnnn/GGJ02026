@@ -296,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   gun: {fileID: 7142965143263536304}
   cap: {fileID: 8687427020628046845}
+  capSelectionScript: {fileID: 156128239796170823}
 --- !u!114 &7142965143263536304 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4305899511578522944, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
@@ -364,11 +365,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SodaCork
       objectReference: {fileID: 0}
+    - target: {fileID: 5535840444373111419, guid: 58189f947686ff141b398dd8e441c175, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58189f947686ff141b398dd8e441c175, type: 3}
+--- !u!114 &156128239796170823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7067799308260349173, guid: 58189f947686ff141b398dd8e441c175, type: 3}
+  m_PrefabInstance: {fileID: 6935389257106793650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6857e4de106694f8401f98712b5cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandleSelection
 --- !u!4 &2828990006707836529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5151524944460018371, guid: 58189f947686ff141b398dd8e441c175, type: 3}

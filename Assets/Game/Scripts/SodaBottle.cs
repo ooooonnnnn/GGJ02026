@@ -8,6 +8,7 @@ public class SodaBottle : MonoBehaviour
 
     [SerializeField, HideInInspector] private GunShooting gun;
     [SerializeField, HideInInspector] private BottleCap cap;
+    [SerializeField, HideInInspector] private HandleSelection capSelectionScript;
 
     private void OnValidate()
     {
@@ -16,5 +17,13 @@ public class SodaBottle : MonoBehaviour
         
         HandleSelection selection = GetComponent<HandleSelection>();
         selection.OnGrabbed.AddListener(cap.MakeGrabbable);
+        capSelectionScript = cap.GetComponent<HandleSelection>();
+        capSelectionScript.OnGrabbed.AddListener(CapRemoved);
+    }
+
+    private void CapRemoved()
+    {
+        capped = false;
+        capSelectionScript.OnGrabbed.RemoveListener(CapRemoved);
     }
 }

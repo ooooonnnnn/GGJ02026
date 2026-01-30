@@ -84,7 +84,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5491634004667541625}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
   m_Name: 
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b6857e4de106694f8401f98712b5cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandleSelection
-  OnSelectFallback:
+  OnGrabbed:
     m_PersistentCalls:
       m_Calls: []
 --- !u!54 &5535840444373111419
@@ -189,7 +189,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -205,6 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f49e0ca3e1cc04cae714c0ae4f19f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  interactable: {fileID: 8931758533034485988}
+  rb: {fileID: 5535840444373111419}
+  selection: {fileID: 7067799308260349173}
 --- !u!65 &476856166780404596
 BoxCollider:
   m_ObjectHideFlags: 0

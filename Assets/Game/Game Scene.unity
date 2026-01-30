@@ -4465,10 +4465,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2222949761957100633, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237017505934390985, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237017505934390985, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4452204670365950503, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: m_Name
       value: Gun_Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 5659013638416003064, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687427020628046845, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1555391463}
     - target: {fileID: 8980748884880086201, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.49606684
@@ -4479,7 +4499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8980748884880086201, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.20133576
+      value: 0.1095
       objectReference: {fileID: 0}
     - target: {fileID: 8980748884880086201, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4510,7 +4530,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5239992555441051602, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
@@ -4930,11 +4951,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectsToReset:
-  - {fileID: 0}
   - {fileID: 938402503}
   - {fileID: 1935852348}
   - {fileID: 547215373}
-  - {fileID: 2115791859}
   - {fileID: 900696571}
   m_CheckDuration: 2
   m_ObjectRoot: {fileID: 1434975003}
@@ -5629,6 +5648,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4455438662752596672, guid: b0c78422845bac948a9080175e57ffff, type: 3}
   m_PrefabInstance: {fileID: 1542318347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1555391463 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 3237017505934390985, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+  m_PrefabInstance: {fileID: 1119559346}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1576716363
 GameObject:
@@ -7895,11 +7919,6 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4455438662752596672, guid: b0c78422845bac948a9080175e57ffff, type: 3}
   m_PrefabInstance: {fileID: 2113631880}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2115791859 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2613019888168551753, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
-  m_PrefabInstance: {fileID: 797282005}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2115791865 stripped
 MonoBehaviour:
