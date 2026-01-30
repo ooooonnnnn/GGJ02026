@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e8c9be2-a22d-4994-bee0-91bb398d1392" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="6e8c9be2-a22d-4994-bee0-91bb398d1392" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769770313756</updated>
-      <workItem from="1769770336406" duration="9062000" />
+      <workItem from="1769770336406" duration="9652000" />
     </task>
     <servers />
   </component>
