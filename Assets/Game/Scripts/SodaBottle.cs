@@ -80,11 +80,13 @@ public class SodaBottle : MonoBehaviour
                 gun.Reload();
                 capped = true;
                 
-                Transform capTransform = other.transform;
+                Transform capTransform = other.transform.parent;
+                capTransform.GetComponent<XRGrabInteractable>().enabled = false;
+                
                 capTransform.SetParent(capRoot);
                 capTransform.localPosition = Vector3.zero;
                 capTransform.localRotation = Quaternion.identity;
-                other.GetComponent<Rigidbody>().isKinematic = true;
+                capTransform.GetComponent<Rigidbody>().isKinematic = true;
             }
         }
     }

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SodaCork
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98a4953be36ee04408659dd0ce03aafc, type: 3}
+      propertyPath: m_TagString
+      value: Bottle Cap
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

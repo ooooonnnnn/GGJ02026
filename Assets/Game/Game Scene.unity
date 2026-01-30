@@ -893,17 +893,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4455438662752596672, guid: b0c78422845bac948a9080175e57ffff, type: 3}
   m_PrefabInstance: {fileID: 203859524}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &231182203 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1361581919145351960, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-  m_PrefabInstance: {fileID: 447863379}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
 --- !u!1 &231362122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,38 +1686,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1361581919145351960, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-      propertyPath: m_ForceGravityOnDetach
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1361581919145351960, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-      propertyPath: m_RetainTransformParent
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2744826017930000391, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-      propertyPath: grabInteractable
-      value: 
-      objectReference: {fileID: 1594192064}
-    - target: {fileID: 2744826017930000391, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-      propertyPath: capGrabInteractable
-      value: 
-      objectReference: {fileID: 231182203}
-    - target: {fileID: 3980820389077422835, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-      propertyPath: m_Colliders.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4452204670365950503, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: m_Name
       value: Gun_Bottle
       objectReference: {fileID: 0}
-    - target: {fileID: 6121455830402179571, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c673c2aeb4a74245b0bbd1babdafee6, type: 2}
-    - target: {fileID: 6121455830402179571, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 3c6db56bd68a4e642903690ffe4e47b7, type: 2}
     - target: {fileID: 8980748884880086201, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5732
@@ -5628,17 +5589,6 @@ Transform:
   - {fileID: 1985586552}
   m_Father: {fileID: 1434975003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1594192064 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3980820389077422835, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-  m_PrefabInstance: {fileID: 447863379}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
 --- !u!4 &1594192068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8980748884880086201, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
