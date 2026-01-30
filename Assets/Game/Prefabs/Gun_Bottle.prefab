@@ -255,6 +255,10 @@ PrefabInstance:
       propertyPath: m_Renderer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5317663600809657560, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: m_PredictedVisualsTransform
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7289111963918758871, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
       propertyPath: m_Name
       value: Gun_Bottle
@@ -268,8 +272,41 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2613019888168551753, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3632473635481810968}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7289111963918758871, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2167729864143351433}
   m_SourcePrefab: {fileID: 100100000, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+--- !u!1 &4452204670365950503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7289111963918758871, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+  m_PrefabInstance: {fileID: 6404479555504050672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2167729864143351433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452204670365950503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be54766d7a4c884bba1da77e37f6721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  gun: {fileID: 7142965143263536304}
+  cap: {fileID: 8687427020628046845}
+--- !u!114 &7142965143263536304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4305899511578522944, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+  m_PrefabInstance: {fileID: 6404479555504050672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452204670365950503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d799870564f58b44085807a0d2d3af47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!4 &8980748884880086201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2613019888168551753, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
@@ -337,3 +374,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5151524944460018371, guid: 58189f947686ff141b398dd8e441c175, type: 3}
   m_PrefabInstance: {fileID: 6935389257106793650}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8687427020628046845 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1779065958900635471, guid: 58189f947686ff141b398dd8e441c175, type: 3}
+  m_PrefabInstance: {fileID: 6935389257106793650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f49e0ca3e1cc04cae714c0ae4f19f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'

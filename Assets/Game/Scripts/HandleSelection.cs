@@ -16,8 +16,8 @@ public class HandleSelection : MonoBehaviour
     private InteractorHandedness grabbedByHand = InteractorHandedness.None;
     private Rigidbody rb;
 
-    [SerializeField, Tooltip("Called when the object is selected but not grabbed or released")]
-    private UnityEvent OnSelectFallback;
+    [Tooltip("Called when the object is grabbed")]
+    public UnityEvent OnGrabbed;
 
     private void OnValidate()
     {
@@ -34,8 +34,6 @@ public class HandleSelection : MonoBehaviour
         if (grabbedByHand is InteractorHandedness.None) Grab(selectingHand);
         
         else if (grabbedByHand == selectingHand) Release();
-        
-        else OnSelectFallback.Invoke();
     }
 
     private void Grab(InteractorHandedness grabbingHand)
@@ -50,6 +48,8 @@ public class HandleSelection : MonoBehaviour
         transform.localRotation = Quaternion.identity;
         
         rb.isKinematic = true;
+        
+        OnGrabbed.Invoke();
     }
 
     private void Release()
