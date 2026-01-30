@@ -48,29 +48,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4305899511578522944, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
-      propertyPath: bulletSpawn
-      value: 
-      objectReference: {fileID: 1915170987118448569}
-    - target: {fileID: 4305899511578522944, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 9024933806776756330, guid: 76dc047a59b60a145ac28dccdecfe4a3, type: 3}
     - target: {fileID: 7289111963918758871, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
       propertyPath: m_Name
       value: Gun_Bottle
       objectReference: {fileID: 0}
     - target: {fileID: 9148742141099747831, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
-      propertyPath: reloadToShootDelay
-      value: 0.5
+      propertyPath: prompts.Array.size
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 9148742141099747831, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: 'prompts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7689176817093518625}
+    - target: {fileID: 9148742141099747831, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: 'prompts.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4842178759211706658}
+    - target: {fileID: 9148742141099747831, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: 'prompts.Array.data[2]'
+      value: 
+      objectReference: {fileID: 9056733794470246323}
+    - target: {fileID: 9148742141099747831, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: 'prompts.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1869283342257430334}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
---- !u!4 &1915170987118448569 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4788810626720226889, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+--- !u!1 &1869283342257430334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4688334565601513166, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+  m_PrefabInstance: {fileID: 6404479555504050672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4842178759211706658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2005113196382484690, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+  m_PrefabInstance: {fileID: 6404479555504050672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7689176817093518625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3626587003641214161, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+  m_PrefabInstance: {fileID: 6404479555504050672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9056733794470246323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2688283252111615555, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
   m_PrefabInstance: {fileID: 6404479555504050672}
   m_PrefabAsset: {fileID: 0}

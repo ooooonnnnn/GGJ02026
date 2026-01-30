@@ -19,6 +19,7 @@ public class SodaBottle : MonoBehaviour
     [SerializeField, HideInInspector] private XRGrabInteractable capGrabInteractable;
     [SerializeField, HideInInspector] private ColliderEvents colliderEvents;
     [SerializeField] private Transform capRoot;
+    [SerializeField] private GameObject[] prompts;
 
     private void OnValidate()
     {
@@ -43,10 +44,26 @@ public class SodaBottle : MonoBehaviour
     [SerializeField, Tooltip("Time it takes for the poke interaction to become enabled once the protocol is complete")]
     private float reloadToShootDelay;
 
+    private void Awake()
+    {
+        UpdatePromptVisibility(-1);
+    }
+
     private void EnableCapGrab(SelectEnterEventArgs args)
     {
         //if capped, allow cap to be grabbed
         if (capped) capGrabInteractable.enabled = true;
+        UpdatePromptVisibility(0);
+    }
+
+    private void UpdatePromptVisibility(int promptInd)
+    {
+        int i = 0;
+        foreach (GameObject prompt in prompts)
+        {
+            prompt.SetActive(promptInd == i);
+            i++;
+        }
     }
 
     private void DisableCapGrab(SelectExitEventArgs args)
@@ -60,11 +77,12 @@ public class SodaBottle : MonoBehaviour
         if (!capped) return;
         
         capped = false;
-        print("Cap Removed");
         grabInteractable.firstSelectEntered.RemoveListener(EnableCapGrab);
         grabInteractable.lastSelectExited.RemoveListener(DisableCapGrab);
 
         colliderEvents.TriggerEnter += ItemPresentedToBottle;
+        
+        UpdatePromptVisibility(1);
     }
 
     private void ItemPresentedToBottle(Collider other)
@@ -77,6 +95,9 @@ public class SodaBottle : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 fizzing = true;
+                
+                
+                UpdatePromptVisibility(2);
             }
         }
         
@@ -104,6 +125,7 @@ public class SodaBottle : MonoBehaviour
     private void EnablePoke()
     {
         pokeInteractable.enabled = true;
+        UpdatePromptVisibility(3);
     }
 
     private void TryShoot(SelectEnterEventArgs args)
@@ -112,6 +134,8 @@ public class SodaBottle : MonoBehaviour
         {
             gun.OnShoot.AddListener(DestroyCap);
             gun.Shoot();
+            
+            UpdatePromptVisibility(1);
         }
     }
 
