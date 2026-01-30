@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -7,14 +8,16 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 /// Can be grabbed and released with hands by pinching. Toggles, no contniuous interaction required
 /// </summary>
 [RequireComponent(typeof(XRSimpleInteractable))]
-public class ToggleGrabAndRelease : MonoBehaviour
+public class HandleSelection : MonoBehaviour
 {
     /// <summary>
     /// None => not grabbed. right or left => grabbed
     /// </summary>
     private InteractorHandedness grabbedByHand = InteractorHandedness.None;
-    
     private Rigidbody rb;
+
+    [SerializeField, Tooltip("Called when the object is selected but not grabbed or released")]
+    private UnityEvent OnSelectFallback;
 
     private void OnValidate()
     {
@@ -31,6 +34,8 @@ public class ToggleGrabAndRelease : MonoBehaviour
         if (grabbedByHand is InteractorHandedness.None) Grab(selectingHand);
         
         else if (grabbedByHand == selectingHand) Release();
+        
+        else OnSelectFallback.Invoke();
     }
 
     private void Grab(InteractorHandedness grabbingHand)
