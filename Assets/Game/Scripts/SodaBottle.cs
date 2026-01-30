@@ -22,26 +22,33 @@ public class SodaBottle : MonoBehaviour
         capGrabInteractable = cap.GetComponent<XRGrabInteractable>();
         capGrabInteractable.enabled = false;
         
-        grabInteractable.firstSelectEntered.AddListener(HandleGrabbed);
-        grabInteractable.lastSelectExited.AddListener(HandleDropped);
+        grabInteractable.firstSelectEntered.AddListener(EnableCapGrab);
+        grabInteractable.lastSelectExited.AddListener(DisableCapGrab);
+        
+        capGrabInteractable.firstSelectEntered.AddListener(CapRemoved);
     }
 
     private GameObject handInRangeObj;
 
-    private void HandleGrabbed(SelectEnterEventArgs args)
+    private void EnableCapGrab(SelectEnterEventArgs args)
     {
         //if capped, allow cap to be grabbed
         if (capped) capGrabInteractable.enabled = true;
     }
 
-    private void HandleDropped(SelectExitEventArgs args)
+    private void DisableCapGrab(SelectExitEventArgs args)
     {
         //if capped, disable cap grab
         if (capped) capGrabInteractable.enabled = false;
     }
 
-    private void CapRemoved()
+    private void CapRemoved(SelectEnterEventArgs args)
     {
-        capped = false;
+        if (capped)
+        {
+            capped = false;
+            grabInteractable.firstSelectEntered.RemoveListener(EnableCapGrab);
+            grabInteractable.lastSelectExited.RemoveListener(DisableCapGrab);
+        }
     }
 }

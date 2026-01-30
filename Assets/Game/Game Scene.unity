@@ -1692,6 +1692,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1361581919145351960, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+      propertyPath: m_ForceGravityOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361581919145351960, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+      propertyPath: m_RetainTransformParent
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2744826017930000391, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: grabInteractable
       value: 
