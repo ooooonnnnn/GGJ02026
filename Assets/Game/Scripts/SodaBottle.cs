@@ -5,19 +5,24 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class SodaBottle : MonoBehaviour
 {
+    private const string mentosTag = "Mentos";
+    private const string bottleCapTag = "Bottle Cap";
     private bool capped = true;
-    private bool fizzing;
+    private bool fizzing = false;
 
-    [SerializeField] private GunShooting gun;
-    [SerializeField, ] private BottleCap cap;
-    [SerializeField, ] private XRGrabInteractable grabInteractable;
-    [SerializeField] private XRGrabInteractable capGrabInteractable;
+    [SerializeField, HideInInspector] private GunShooting gun;
+    [SerializeField, HideInInspector] private BottleCap cap;
+    [SerializeField, HideInInspector] private XRGrabInteractable grabInteractable;
+    [SerializeField, HideInInspector] private XRGrabInteractable capGrabInteractable;
+    [SerializeField, HideInInspector] private ColliderEvents colliderEvents;
+    [SerializeField] private Transform capRoot;
 
     private void OnValidate()
     {
         gun = GetComponent<GunShooting>();
         cap = GetComponentInChildren<BottleCap>();
         grabInteractable = GetComponent<XRGrabInteractable>();
+        colliderEvents = GetComponentInChildren<ColliderEvents>();
         
         capGrabInteractable = cap.GetComponent<XRGrabInteractable>();
         capGrabInteractable.enabled = false;
@@ -44,11 +49,43 @@ public class SodaBottle : MonoBehaviour
 
     private void CapRemoved(SelectEnterEventArgs args)
     {
-        if (capped)
+        if (!capped) return;
+        
+        capped = false;
+        print("Cap Removed");
+        grabInteractable.firstSelectEntered.RemoveListener(EnableCapGrab);
+        grabInteractable.lastSelectExited.RemoveListener(DisableCapGrab);
+
+        colliderEvents.TriggerEnter += ItemPresentedToBottle;
+    }
+
+    private void ItemPresentedToBottle(Collider other)
+    {
+        
+        //look for mentos
+        if (!capped && !fizzing)
         {
-            capped = false;
-            grabInteractable.firstSelectEntered.RemoveListener(EnableCapGrab);
-            grabInteractable.lastSelectExited.RemoveListener(DisableCapGrab);
+            if (other.CompareTag(mentosTag))
+            {
+                Destroy(other.gameObject);
+                fizzing = true;
+            }
+        }
+        
+        //look for cap
+        if (!capped && fizzing)
+        {
+            if (other.CompareTag(bottleCapTag))
+            {
+                gun.Reload();
+                capped = true;
+                
+                Transform capTransform = other.transform;
+                capTransform.SetParent(capRoot);
+                capTransform.localPosition = Vector3.zero;
+                capTransform.localRotation = Quaternion.identity;
+                other.GetComponent<Rigidbody>().isKinematic = true;
+            }
         }
     }
 }
