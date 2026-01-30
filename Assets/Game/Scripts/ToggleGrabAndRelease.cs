@@ -13,11 +13,15 @@ public class ToggleGrabAndRelease : MonoBehaviour
     /// None => not grabbed. right or left => grabbed
     /// </summary>
     private InteractorHandedness grabbedByHand = InteractorHandedness.None;
+    
+    private Rigidbody rb;
 
     private void OnValidate()
     {
         XRSimpleInteractable interactable = GetComponent<XRSimpleInteractable>();
         interactable.selectEntered.AddListener(HandleSelect);
+        rb = GetComponent<Rigidbody>();
+        rb.isKinematic = false;
     }
 
     private void HandleSelect(SelectEnterEventArgs args)
@@ -39,12 +43,16 @@ public class ToggleGrabAndRelease : MonoBehaviour
         
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+        
+        rb.isKinematic = true;
     }
 
     private void Release()
     {
         grabbedByHand = InteractorHandedness.None;
         
-        Destroy(gameObject);
+        transform.SetParent(null);
+        
+        rb.isKinematic = false;
     }
 }
