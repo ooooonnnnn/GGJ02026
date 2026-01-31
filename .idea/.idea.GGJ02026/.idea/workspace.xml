@@ -6,23 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6e8c9be2-a22d-4994-bee0-91bb398d1392" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Art Assests/GGJ folder/SodaCork.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Art Assests/GGJ folder/SodaCork.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Bottle and mentos.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Bottle and mentos.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun_Bottle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun_Bottle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Mentos.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Mentos.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/SodaBottle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/SodaBottle.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/SodaCork.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/SodaCork.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Survivor A Lusth.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Survivor A Lusth.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/cap grabbable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/cap grabbable.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/BottleCap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/BottleCap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/CreateRandomObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/CreateRandomObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Test Scene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +168,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\Users\omrit\Documents\GitHub\GGJ02026\Assets\Game\Scripts\SodaBottle.cs" containingFunctionPresentation="Method 'EnableCapGrab'">
+            <startOffsets>
+              <option value="2042" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2043" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -83,7 +83,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.01, y: 0.01, z: 0.01}
+  m_Size: {x: 0.005, y: 0.005, z: 0.001}
   m_Center: {x: 0.0000006029149, y: 0.0000007658966, z: -0.000022600876}
 --- !u!114 &7613358030092225645
 MonoBehaviour:
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
   m_InteractionManager: {fileID: 0}
   m_Colliders:
-  - {fileID: 0}
+  - {fileID: 5598612466815157374}
   m_InteractionLayers:
     m_Bits: 6
   m_DistanceCalculationMode: 1
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AutoFindParentInteractableInHierarchy: 0
+  m_AutoFindParentInteractableInHierarchy: 1
   m_ParentInteractableObject: {fileID: 0}
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}

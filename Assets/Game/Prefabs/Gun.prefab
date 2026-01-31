@@ -349,7 +349,7 @@ MonoBehaviour:
   pokeInteractable: {fileID: 6919620855095138193, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
   capGrabInteractable: {fileID: 1361581919145351960, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
   colliderEvents: {fileID: 314896370891323312, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-  capRoot: {fileID: 7921217368198631718, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+  capRoot: {fileID: 8699692041221872222}
   prompts:
   - {fileID: 3626587003641214161}
   - {fileID: 2005113196382484690}
@@ -804,7 +804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5598612466815157374, guid: bc042d6902d114d4b962e08ec5eaf3ce, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6236665007996660842, guid: bc042d6902d114d4b962e08ec5eaf3ce, type: 3}
       propertyPath: m_Name

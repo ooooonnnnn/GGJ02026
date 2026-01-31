@@ -13,8 +13,8 @@ public class BottleCap : MonoBehaviour
         interactable = GetComponent<XRGrabInteractable>();
         rb = GetComponent<Rigidbody>();
 
-        interactable.enabled = false;
-        rb.isKinematic = true;
+        // interactable.enabled = false;
+        // rb.isKinematic = true;
         
         interactable.lastSelectExited.AddListener(RBNotKinematic);
     }
