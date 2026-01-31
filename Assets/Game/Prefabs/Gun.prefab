@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Colliders:
   - {fileID: 231052318512123012}
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 7
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -728,6 +728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageOnHit
   damageAmount: 0
+  destroyOnAnyHit: 0
 --- !u!1 &7355883338653158330
 GameObject:
   m_ObjectHideFlags: 0

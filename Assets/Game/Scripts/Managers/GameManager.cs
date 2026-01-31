@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject); 
@@ -71,4 +71,6 @@ public class GameManager : MonoBehaviour
         // Reload the current active scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    
+    public void QuitGame() => Application.Quit();
 }
