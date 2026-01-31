@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e8c9be2-a22d-4994-bee0-91bb398d1392" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Art Assests/Scary Zombie Pack/ZombieStuff.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Art Assests/Scary Zombie Pack/ZombieStuff.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Game Scene/NavMesh-Cube Biant 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Game Scene/NavMesh-Cube Biant 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Game Scene/NavMesh-Cube Biant 1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Game Scene/NavMesh-Cube Biant 1.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Old/Survivor A Lusth.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Old/Survivor A Lusth.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
