@@ -1,9 +1,13 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DamageOnHit : MonoBehaviour
 {
     [SerializeField] private float damageAmount;
     [SerializeField] private bool destroyOnAnyHit;
+    public UnityEvent OnDamagingHit;
+    [SerializeField] private float destroyTime;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -13,9 +17,29 @@ public class DamageOnHit : MonoBehaviour
         {
             target.Hit();
             print("Take that bitch");
-            Destroy(gameObject);
+            OnDamagingHit.Invoke();
+            DisableChildren();
+            Invoke(nameof(SelfDestruct), destroyTime);
         }
         
-        if (destroyOnAnyHit) Destroy(gameObject);
+        if (destroyOnAnyHit)
+        {
+            DisableChildren();
+            Invoke(nameof(SelfDestruct), destroyTime);
+        }
+
+    }
+
+    private void DisableChildren()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
+
+    private void SelfDestruct()
+    {
+        Destroy(gameObject);
     }
 }
