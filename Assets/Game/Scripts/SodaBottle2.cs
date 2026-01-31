@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -8,12 +9,22 @@ public class SodaBottle2 : MonoBehaviour
     [SerializeField] private GameObject[] prompts;
     [SerializeField] private ColliderEvents itemDetectionColEvents;
     [SerializeField] private Transform capRoot;
+    [SerializeField] private XRSimpleInteractable fireInteractable;
+    [SerializeField] private Collider fireCollider;
+    [SerializeField] private GunShooting gun;
     
     private BottleState state
     {
         get => _state;
         set
         {
+            if (value == BottleState.ClosedFizz)
+            {
+                gun.Reload();
+                fireCollider.enabled = true;
+            }
+            else fireCollider.enabled = false;
+            
             SetCallbacksForState(value);
             SetPromptForState(value);
             _state = value;
@@ -22,7 +33,8 @@ public class SodaBottle2 : MonoBehaviour
 
     private BottleState _state = BottleState.None;
     [SerializeField] private BottleCap cap;
-    
+    [SerializeField] private float delayBeforeClosedFizz;
+
     private enum BottleState
     {
         CLosedNoFizz,
@@ -58,6 +70,9 @@ public class SodaBottle2 : MonoBehaviour
                 break;
             case BottleState.OpenFizz:
                 itemDetectionColEvents.TriggerEnter += ExpectCap;
+                break;
+            case BottleState.ClosedFizz:
+                fireInteractable.firstSelectEntered.AddListener(Shoot);
                 break;
         }
     }
@@ -100,6 +115,9 @@ public class SodaBottle2 : MonoBehaviour
         
         itemDetectionColEvents.TriggerEnter -= ExpectCap;
         
+        //store it for later
+        cap = other.GetComponent<BottleCap>();
+        
         //make it my child
         Transform capTransform = other.transform;
         capTransform.SetParent(capRoot);
@@ -112,7 +130,21 @@ public class SodaBottle2 : MonoBehaviour
         //make it kinematic
         capTransform.GetComponent<Rigidbody>().isKinematic = true;
         
+        StartCoroutine(DelayThenSwitchToClosedFizz());
+    }
+
+    private IEnumerator DelayThenSwitchToClosedFizz()
+    {
+        yield return new WaitForSeconds(delayBeforeClosedFizz);
         state = BottleState.ClosedFizz;
+    }
+
+    private void Shoot(SelectEnterEventArgs args)
+    {
+        fireInteractable.firstSelectEntered.RemoveListener(Shoot);
+        Destroy(cap.gameObject);
+        gun.Shoot();
+        state = BottleState.OpenNoFizz;
     }
 }
 
