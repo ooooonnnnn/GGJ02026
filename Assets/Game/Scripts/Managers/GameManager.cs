@@ -13,18 +13,18 @@ public class GameManager : MonoBehaviour
     public bool isGameActive = true;
     public int score = 0;
 
-    private void Awake()
-    {
-        if (!Instance)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); 
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    // private void Awake()
+    // {
+    //     if (!Instance)
+    //     {
+    //         Instance = this;
+    //         DontDestroyOnLoad(gameObject); 
+    //     }
+    //     else
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
 
     public void StartGame()
     {
