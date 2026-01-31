@@ -758,7 +758,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abaa4d8768eb8fe429f5bfd0c6b5f5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayRandomSound
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: c55e989525f06d64982432541ff1cb99, type: 3}
+  - {fileID: 8300000, guid: 8b3dd18e2e6fa074aa5ea04946c2aa4c, type: 3}
+  - {fileID: 8300000, guid: 91f9fabe00f3f544386e04458ef6ec37, type: 3}
+  - {fileID: 8300000, guid: c1b6873329385b34a95319440d77a9d6, type: 3}
   audioSource: {fileID: 9198784927096335695}
 --- !u!1 &7355883338653158330
 GameObject:
