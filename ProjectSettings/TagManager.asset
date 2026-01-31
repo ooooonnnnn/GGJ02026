@@ -5,14 +5,16 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - Mentos
+  - Bottle Cap
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bottle Cap
   - Water
   - UI
-  - 
+  - Bottle
   - 
   - 
   - 
