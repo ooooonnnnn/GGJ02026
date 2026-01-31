@@ -2,6 +2,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] public GameObject enemyPrefab;
+    [SerializeField] public GameManager gm;
     [SerializeField] public float spawnRateStart = 2.0f;
     [SerializeField] public float spawnRateEnd = 4.0f;
     [SerializeField] public float decayRate = 0.95f;
@@ -14,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
         // Only spawn if the game is active
         //if (GameManager.Instance != null && !GameManager.Instance.isGameActive) return;
 
-        if (Time.time > _nextSpawnTime)
+        if (Time.time > _nextSpawnTime&&gm.isGameActive)
         {
             SpawnEnemy();
             _nextSpawnTime = Time.time + Random.Range(spawnRateStart,spawnRateEnd);
