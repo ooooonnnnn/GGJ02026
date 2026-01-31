@@ -2,12 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     [SerializeField] public CanvasGroup fadeGroup;
     public float fadeDuration = 1.0f;
+    [SerializeField] public TextMeshProUGUI scoreText;
 
     [Header("Game State")]
     public bool isGameActive = true;
@@ -25,7 +28,16 @@ public class GameManager : MonoBehaviour
     //         Destroy(gameObject);
     //     }
     // }
+    public void IncreaseScore()
+    {
+        score += 1;
+        UpdateScoreUI();
+    }
 
+    private void UpdateScoreUI()
+    {
+        scoreText.text = score.ToString();
+    }
     public void StartGame()
     {
         isGameActive = true;
@@ -33,12 +45,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Started!");
     }
 
-    public void UpdateScore(int points)
+    public void UpdateScore(int added_s)
     {
         if (isGameActive)
         {
-            score += points;
-            Debug.Log("Current Score: " + score);
+            score += added_s;
+            Debug.Log(score);
+            UpdateScoreUI();
         }
     }
 
@@ -73,4 +86,5 @@ public class GameManager : MonoBehaviour
     }
     
     public void QuitGame() => Application.Quit();
+    void OnEnable() { EnemyAI.OnEnemyKilled += UpdateScore; }
 }

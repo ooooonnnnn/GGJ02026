@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using System;
 using System.Collections.Generic;
 public class EnemyAI : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class EnemyAI : MonoBehaviour
     public GameObject target; 
     Animator myAnimator;
     NavMeshAgent agent;
-
+    [SerializeField] public bool die = false;
+    public static event Action<int> OnEnemyKilled;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,7 +28,6 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(target.transform.position);
         }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,11 +35,15 @@ public class EnemyAI : MonoBehaviour
             myAnimator.SetInteger("State", 2);
             agent.isStopped = true;
         }
+        if(die){
+            Hit();
+        }
     }
     public void Hit(){
         print("I was hit when I was young");
         Destroy(gameObject.GetComponent<Collider>());
         myAnimator.SetTrigger("Die");
+        OnEnemyKilled?.Invoke(1);
         agent.isStopped = true;
         StartCoroutine(wait_they_dont_love_you());
         IEnumerator wait_they_dont_love_you(){
