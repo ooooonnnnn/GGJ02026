@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
             _nextSpawnTime = Time.time + Random.Range(spawnRateStart,spawnRateEnd);
             spawnRateStart= spawnRateStart*decayRate;
             spawnRateEnd= spawnRateEnd*decayRate;
-            Debug.Log(_nextSpawnTime-Time.time);
+            // Debug.Log(_nextSpawnTime-Time.time);
         }
     }
 
