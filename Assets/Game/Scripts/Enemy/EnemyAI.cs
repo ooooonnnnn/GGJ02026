@@ -47,4 +47,7 @@ public class EnemyAI : MonoBehaviour
         }
         
     }
+    public void HitPlayer(){
+        target.GetComponent<UserController>().hit();
+    }
 }
