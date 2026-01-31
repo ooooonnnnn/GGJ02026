@@ -37,7 +37,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void Hit(){
         print("I was hit when I was young");
-        myAnimator.SetInteger("State", 1);
+        myAnimator.SetTrigger("Die");
         agent.isStopped = true;
         StartCoroutine(wait_they_dont_love_you());
         IEnumerator wait_they_dont_love_you(){
