@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScoreUI()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = $"Kills: {score.ToString()}";
     }
     public void StartGame()
     {
