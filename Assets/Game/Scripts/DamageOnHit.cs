@@ -9,7 +9,11 @@ public class DamageOnHit : MonoBehaviour
         //check if the collider is an enemy
         if (true)
         {
-            //deal damage
+            EnemyAI target = other.gameObject.GetComponent<EnemyAI>();
+            if(target != null){
+                target.Hit();
+            }
+            Destroy(gameObject);
         }
         
         Destroy(gameObject);
