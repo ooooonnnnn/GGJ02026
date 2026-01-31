@@ -289,11 +289,11 @@ GameObject:
   - component: {fileID: 2613019888168551753}
   - component: {fileID: 3410560511822335312}
   - component: {fileID: 4305899511578522944}
-  - component: {fileID: 9148742141099747831}
   - component: {fileID: 8061442458305004291}
   - component: {fileID: 7712302383009297831}
   - component: {fileID: 4100007085256115809}
   - component: {fileID: 2888787527029567870}
+  - component: {fileID: 1812485044140563196}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -363,32 +363,6 @@ MonoBehaviour:
   OnShoot:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &9148742141099747831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7289111963918758871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be54766d7a4c884bba1da77e37f6721, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  gun: {fileID: 7142965143263536304, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-  cap: {fileID: 4278231535795313786, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-  grabInteractable: {fileID: 3980820389077422835, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-  pokeInteractable: {fileID: 6919620855095138193, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-  capGrabInteractable: {fileID: 1361581919145351960, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
-  colliderEvents: {fileID: 6683329398409225792}
-  capRoot: {fileID: 8385654509295880526}
-  prompts:
-  - {fileID: 3626587003641214161}
-  - {fileID: 2005113196382484690}
-  - {fileID: 2688283252111615555}
-  - {fileID: 4688334565601513166}
-  pokeCollider: {fileID: 312430979730943660}
-  reloadToShootDelay: 0.5
 --- !u!114 &8061442458305004291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,6 +602,26 @@ MonoBehaviour:
       m_EnablePokeAngleThreshold: 1
       m_PokeAngleThreshold: 89.9
     m_Variable: {fileID: 0}
+--- !u!114 &1812485044140563196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7289111963918758871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc0296a9ad7b7046b751680ae8b69ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  prompts:
+  - {fileID: 3626587003641214161}
+  - {fileID: 2005113196382484690}
+  - {fileID: 2688283252111615555}
+  - {fileID: 4688334565601513166}
+  itemDetectionColEvents: {fileID: 6683329398409225792}
+  capRoot: {fileID: 8385654509295880526}
+  cap: {fileID: 0}
 --- !u!1 &7355883338653158330
 GameObject:
   m_ObjectHideFlags: 0
