@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class GunShooting : MonoBehaviour
 {
     [SerializeField] private int clipSize;
-    [SerializeField] private int currentAmmo;
+    private int currentAmmo = 0;
     [SerializeField] private Rigidbody bulletPrefab;
     [SerializeField] private Transform bulletSpawn;
     [SerializeField] private float bulletSpeed;
@@ -24,7 +24,6 @@ public class GunShooting : MonoBehaviour
     
     public void Reload()
     {
-        print("reload");
         currentAmmo = clipSize;
     }
 

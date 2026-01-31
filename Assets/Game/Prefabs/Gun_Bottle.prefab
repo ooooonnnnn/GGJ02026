@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2592922805326892442, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: m_text
+      value: Flick the cap!
+      objectReference: {fileID: 0}
     - target: {fileID: 2613019888168551753, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5732
@@ -47,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 2613019888168551753, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4788810626720226889, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1611
       objectReference: {fileID: 0}
     - target: {fileID: 7289111963918758871, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
       propertyPath: m_Name
