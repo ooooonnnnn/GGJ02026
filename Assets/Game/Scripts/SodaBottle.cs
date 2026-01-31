@@ -21,7 +21,7 @@ public class SodaBottle : MonoBehaviour
     [SerializeField] private Transform capRoot;
     [SerializeField] private GameObject[] prompts;
 
-    private void OnValidate()
+    private void Awake()
     {
         gun = GetComponent<GunShooting>();
         cap = GetComponentInChildren<BottleCap>();
@@ -38,22 +38,22 @@ public class SodaBottle : MonoBehaviour
         capGrabInteractable.firstSelectEntered.AddListener(CapRemoved);
         
         pokeInteractable.firstSelectEntered.AddListener(TryShoot);
+        
+        UpdatePromptVisibility(-1);
     }
 
     private GameObject handInRangeObj;
     [SerializeField, Tooltip("Time it takes for the poke interaction to become enabled once the protocol is complete")]
     private float reloadToShootDelay;
 
-    private void Awake()
-    {
-        UpdatePromptVisibility(-1);
-    }
-
     private void EnableCapGrab(SelectEnterEventArgs args)
     {
         //if capped, allow cap to be grabbed
-        if (capped) capGrabInteractable.enabled = true;
-        UpdatePromptVisibility(0);
+        if (capped)
+        {
+            capGrabInteractable.enabled = true;
+            UpdatePromptVisibility(0);
+        }
     }
 
     private void UpdatePromptVisibility(int promptInd)

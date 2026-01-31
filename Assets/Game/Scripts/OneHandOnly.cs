@@ -12,7 +12,7 @@ public class OneHandOnly : MonoBehaviour
     [SerializeField, HideInInspector] private XRGrabInteractable grabInteractable;
     
 
-    private void OnValidate()
+    private void Awake()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.firstSelectEntered.AddListener(BecomeOwnedByHand);
