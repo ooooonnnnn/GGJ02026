@@ -8,7 +8,7 @@ public class BottleCap : MonoBehaviour
     [SerializeField] private XRGrabInteractable interactable;
     [SerializeField, HideInInspector] private Rigidbody rb;
 
-    private void OnValidate()
+    private void Awake()
     {
         interactable = GetComponent<XRGrabInteractable>();
         rb = GetComponent<Rigidbody>();

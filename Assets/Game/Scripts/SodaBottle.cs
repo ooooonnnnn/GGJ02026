@@ -135,6 +135,8 @@ public class SodaBottle : MonoBehaviour
             gun.OnShoot.AddListener(DestroyCap);
             gun.Shoot();
             
+            fizzing = false;
+            capped = false;
             UpdatePromptVisibility(1);
         }
     }

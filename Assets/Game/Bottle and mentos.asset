@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Bottle and mentos
   m_EditorClassIdentifier: Assembly-CSharp::PrefabCollection
   prefabs:
-  - prefab: {fileID: 4452204670365950503, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
+  - prefab: {fileID: 7289111963918758871, guid: a7b8641edd445dd4faf7256fcf38e23b, type: 3}
     count: 1
   - prefab: {fileID: 2233726470090465106, guid: ecb0127665b3aa444abf37d4fe0ba1ef, type: 3}
     count: 5
-  - prefab: {fileID: 5491634004667541625, guid: 58189f947686ff141b398dd8e441c175, type: 3}
+  - prefab: {fileID: 6236665007996660842, guid: bc042d6902d114d4b962e08ec5eaf3ce, type: 3}
     count: 5
