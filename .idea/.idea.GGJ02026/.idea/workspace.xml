@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6e8c9be2-a22d-4994-bee0-91bb398d1392" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Game Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun_Bottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun_Bottle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/cap bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/cap bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/DamageOnHit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/DamageOnHit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Enemy/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Enemy/EnemyAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/Enemy/EnemySpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/GunShooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/GunShooting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/XRGeneralSettingsPerBuildTarget.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/XRGeneralSettingsPerBuildTarget.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/HandManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/HandManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +30,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/MessagePrinter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/SceneRestarter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@1e87cf1dccb8/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@5f736ad4ccd8/Runtime/Interaction/Interactables/XRBaseInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.management@574ebfb1e976/Runtime/XRLoaderHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
@@ -58,7 +56,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Unity Attach To.Attach to.executor": "Debug",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "ScriptsPhaseIII",
+    "git-widget-placeholder": "fix-bottle",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -158,6 +156,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs</url>
+          <line>135</line>
+          <properties documentPath="C:\Users\omrit\Documents\GitHub\GGJ02026\Assets\Game\Scripts\SodaBottle.cs" containingFunctionPresentation="Method 'TryShoot'">
+            <startOffsets>
+              <option value="4382" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4394" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

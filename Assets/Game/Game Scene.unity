@@ -956,7 +956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1915170987118448569, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1324
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2265301334216814651, guid: d6ed257b4b9f88e448cafa928393a260, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1330,18 +1330,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   _rightPalm: {fileID: 1350096488}
   _leftPalm: {fileID: 992641475}
-  OnLeftGrab:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRightGrab:
-    m_PersistentCalls:
-      m_Calls: []
-  OnLeftPoke:
-    m_PersistentCalls:
-      m_Calls: []
-  OnRightPoke:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &464864767
 Transform:
   m_ObjectHideFlags: 0
