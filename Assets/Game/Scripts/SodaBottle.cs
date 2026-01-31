@@ -17,7 +17,7 @@ public class SodaBottle : MonoBehaviour
     [SerializeField, HideInInspector] private XRGrabInteractable grabInteractable;
     [SerializeField, HideInInspector] private XRSimpleInteractable pokeInteractable;
     [SerializeField, HideInInspector] private XRGrabInteractable capGrabInteractable;
-    [SerializeField, HideInInspector] private ColliderEvents colliderEvents;
+    [SerializeField] private ColliderEvents colliderEvents;
     [SerializeField] private Transform capRoot;
     [SerializeField] private GameObject[] prompts;
 
@@ -26,7 +26,6 @@ public class SodaBottle : MonoBehaviour
         gun = GetComponent<GunShooting>();
         cap = GetComponentInChildren<BottleCap>();
         grabInteractable = GetComponent<XRGrabInteractable>();
-        colliderEvents = GetComponentInChildren<ColliderEvents>();
         pokeInteractable = GetComponentInChildren<XRSimpleInteractable>();
         
         capGrabInteractable = cap.GetComponent<XRGrabInteractable>();
@@ -109,7 +108,7 @@ public class SodaBottle : MonoBehaviour
                 gun.Reload();
                 capped = true;
                 
-                Transform capTransform = other.transform.parent;
+                Transform capTransform = other.transform;
                 capTransform.GetComponent<XRGrabInteractable>().enabled = false;
                 
                 capTransform.SetParent(capRoot);
