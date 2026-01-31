@@ -12,6 +12,7 @@ public class DamageOnHit : MonoBehaviour
             EnemyAI target = other.gameObject.GetComponent<EnemyAI>();
             if(target != null){
                 target.Hit();
+                print("Take that bitch");
             }
             Destroy(gameObject);
         }
