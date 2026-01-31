@@ -4,7 +4,7 @@ public class UserController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int HP;
-    [SerializeField] GameManager gm;
+    [SerializeField] GayManager gm;
     void Start()
     {
         HP = 20;

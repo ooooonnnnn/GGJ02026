@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GayManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GayManager Instance { get; private set; }
 
     [Header("Game State")]
     public bool isGameActive = true;
