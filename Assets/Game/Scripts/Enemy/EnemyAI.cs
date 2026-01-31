@@ -41,10 +41,10 @@ public class EnemyAI : MonoBehaviour
         agent.isStopped = true;
         StartCoroutine(wait_they_dont_love_you());
         IEnumerator wait_they_dont_love_you(){
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(5f);
             //my code here after 3 seconds
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
         
     }
 }
