@@ -20,19 +20,22 @@ public class SodaBottle : MonoBehaviour
     [SerializeField] private ColliderEvents colliderEvents;
     [SerializeField] private Transform capRoot;
     [SerializeField] private GameObject[] prompts;
+    [SerializeField] private Collider pokeCollider;
 
     private void Awake()
     {
         gun = GetComponent<GunShooting>();
         cap = GetComponentInChildren<BottleCap>();
         grabInteractable = GetComponent<XRGrabInteractable>();
-        pokeInteractable = GetComponentInChildren<XRSimpleInteractable>();
+        pokeInteractable = GetComponent<XRSimpleInteractable>();
         
         capGrabInteractable = cap.GetComponent<XRGrabInteractable>();
         capGrabInteractable.enabled = false;
         
         grabInteractable.firstSelectEntered.AddListener(EnableCapGrab);
+        grabInteractable.firstSelectEntered.AddListener(MakePokeColliderPhysical);
         grabInteractable.lastSelectExited.AddListener(DisableCapGrab);
+        grabInteractable.lastSelectExited.AddListener(MakePokeColliderTrigger);
         
         capGrabInteractable.firstSelectEntered.AddListener(CapRemoved);
         
@@ -53,6 +56,16 @@ public class SodaBottle : MonoBehaviour
             capGrabInteractable.enabled = true;
             UpdatePromptVisibility(0);
         }
+    }
+
+    private void MakePokeColliderTrigger(SelectExitEventArgs args)
+    {
+        pokeCollider.isTrigger = true;
+    }
+    
+    private void MakePokeColliderPhysical(SelectEnterEventArgs args)
+    {
+        pokeCollider.isTrigger = false;
     }
 
     private void UpdatePromptVisibility(int promptInd)
@@ -86,7 +99,6 @@ public class SodaBottle : MonoBehaviour
 
     private void ItemPresentedToBottle(Collider other)
     {
-        
         //look for mentos
         if (!capped && !fizzing)
         {
@@ -115,6 +127,8 @@ public class SodaBottle : MonoBehaviour
                 capTransform.localPosition = Vector3.zero;
                 capTransform.localRotation = Quaternion.identity;
                 capTransform.GetComponent<Rigidbody>().isKinematic = true;
+                
+                cap = capTransform.GetComponent<BottleCap>();
                 
                 Invoke(nameof(EnablePoke), reloadToShootDelay);
             }

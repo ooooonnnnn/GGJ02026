@@ -7,7 +7,10 @@
     <list default="true" id="6e8c9be2-a22d-4994-bee0-91bb398d1392" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GGJ02026/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/Gun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Prefabs/cap bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Prefabs/cap bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/GunShooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/GunShooting.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Test Scene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/SceneRestarter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@1e87cf1dccb8/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@5f736ad4ccd8/Runtime/Interaction/Interactables/XRBaseInteractable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@5f736ad4ccd8/Runtime/Interaction/XRInteractionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.management@574ebfb1e976/Runtime/XRLoaderHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
@@ -125,7 +129,7 @@
       <workItem from="1769770336406" duration="14243000" />
       <workItem from="1769788214714" duration="3414000" />
       <workItem from="1769792263012" duration="9255000" />
-      <workItem from="1769833713506" duration="297000" />
+      <workItem from="1769833713506" duration="3491000" />
     </task>
     <servers />
   </component>
@@ -159,13 +163,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Game/Scripts/SodaBottle.cs</url>
-          <line>134</line>
+          <line>148</line>
           <properties documentPath="C:\Users\omrit\Documents\GitHub\GGJ02026\Assets\Game\Scripts\SodaBottle.cs" containingFunctionPresentation="Method 'TryShoot'">
             <startOffsets>
-              <option value="4300" />
+              <option value="4813" />
             </startOffsets>
             <endOffsets>
-              <option value="4312" />
+              <option value="4825" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

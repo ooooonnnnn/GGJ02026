@@ -219,7 +219,7 @@ Transform:
   m_GameObject: {fileID: 3838639252653106371}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0.1302, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1605, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -251,8 +251,8 @@ Transform:
   m_GameObject: {fileID: 4214852379755708122}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.1317, z: 0}
+  m_LocalScale: {x: 1, y: 2.484144, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8699692041221872222}
@@ -276,7 +276,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.01, z: 0.1}
+  m_Size: {x: 0.1, y: 0.005, z: 0.1}
   m_Center: {x: 0, y: 0.09, z: 0}
 --- !u!1 &7289111963918758871
 GameObject:
@@ -387,6 +387,7 @@ MonoBehaviour:
   - {fileID: 2005113196382484690}
   - {fileID: 2688283252111615555}
   - {fileID: 4688334565601513166}
+  pokeCollider: {fileID: 312430979730943660}
   reloadToShootDelay: 0.5
 --- !u!114 &8061442458305004291
 MonoBehaviour:
@@ -546,7 +547,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 7
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -603,7 +604,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AutoFindParentInteractableInHierarchy: 0
+  m_AutoFindParentInteractableInHierarchy: 1
   m_ParentInteractableObject: {fileID: 0}
 --- !u!114 &2888787527029567870
 MonoBehaviour:
@@ -622,7 +623,7 @@ MonoBehaviour:
   m_PokeConfiguration:
     m_UseConstant: 1
     m_ConstantValue:
-      m_PokeDirection: 5
+      m_PokeDirection: 3
       m_InteractionDepthOffset: 0
       m_EnablePokeAngleThreshold: 1
       m_PokeAngleThreshold: 89.9
@@ -669,7 +670,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4423765878012728515, guid: d0156919cf7238141b8588362affce71, type: 3}
       propertyPath: m_text
-      value: Fire!
+      value: Flick the cap!
       objectReference: {fileID: 0}
     - target: {fileID: 4591277385040670361, guid: d0156919cf7238141b8588362affce71, type: 3}
       propertyPath: m_Pivot.x

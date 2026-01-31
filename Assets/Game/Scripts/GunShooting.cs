@@ -15,7 +15,7 @@ public class GunShooting : MonoBehaviour
     
     public void Shoot()
     {
-        // if (currentAmmo <= 0) return;
+        if (currentAmmo <= 0) return;
         currentAmmo--;
         Rigidbody newBullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         newBullet.linearVelocity = transform.forward * bulletSpeed;
@@ -29,6 +29,10 @@ public class GunShooting : MonoBehaviour
 
     private void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame) Shoot();
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            Reload();
+            Shoot();
+        }
     }
 }
