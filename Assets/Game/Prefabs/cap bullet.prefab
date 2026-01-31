@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   damageAmount: 0
+  destroyOnAnyHit: 1
 --- !u!135 &2151600373828035921
 SphereCollider:
   m_ObjectHideFlags: 0
