@@ -30,7 +30,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(transform.position, target.transform.position)<2){
+        if(Vector3.Distance(transform.position, target.transform.position)<1){
             myAnimator.SetInteger("State", 2);
             agent.isStopped = true;
         }
